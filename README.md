@@ -1,5 +1,7 @@
 # Redux
 
+Implementing the https://egghead.io/courses/getting-started-with-redux course
+
 ## Concepts
 
 1. State (Object) is read-only
