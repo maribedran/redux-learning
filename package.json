@@ -1,0 +1,22 @@
+{
+  "name": "redux-learning",
+  "version": "1.0.0",
+  "description": "Learning Redux",
+  "main": "redux-learning.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maribedran/redux-learning.git"
+  },
+  "author": "maribedran@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maribedran/redux-learning/issues"
+  },
+  "homepage": "https://github.com/maribedran/redux-learning#readme",
+  "dependencies": {
+    "expect": "^22.0.3"
+  }
+}
