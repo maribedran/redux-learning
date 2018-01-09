@@ -2,12 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import { createStore } from 'redux';
 
-import counter from './reducers/counter.js';
+import { counter } from './reducers/counter.js';
 import Counter from './components/counter.js';
 
 const store = createStore(counter);
-
-store.dispatch({ type: 'INCREMENT' });
 
 const render = () => {
   ReactDOM.render(

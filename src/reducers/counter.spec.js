@@ -1,5 +1,6 @@
+import deepFreeze from 'deep-freeze';
 import expect, { createSpy, spyOn, isSpy } from 'expect';
-import counter from './counter.js'
+import { counter, addCounter, removeCounter, incrementCounter } from './counter.js'
 
 describe('conter', () => {
   it('should handle INCREMENT action', () => {
@@ -25,4 +26,46 @@ describe('conter', () => {
       counter(undefined, { })
     ).toEqual(0);
   })
+})
+
+describe('addCounter', () => {
+  it('should add element to list', () => {
+    const before = [];
+    const after = [0];
+
+    deepFreeze(before);
+
+    expect(
+      addCounter(before)
+    ).toEqual(after);
+  })
+
+})
+
+describe('removeCounter', () => {
+  it('should remove element from list', () => {
+    const before = [1, 2, 4];
+    const after = [1, 4];
+
+    deepFreeze(before);
+
+    expect(
+      removeCounter(before, 1)
+    ).toEqual(after);
+  })
+
+})
+
+describe('incrementCounter', () => {
+  it('should remove element from list', () => {
+    const before = [1, 2, 4];
+    const after = [1, 3, 4];
+
+    deepFreeze(before);
+
+    expect(
+      incrementCounter(before, 1)
+    ).toEqual(after);
+  })
+
 })

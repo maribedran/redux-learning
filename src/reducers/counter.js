@@ -10,4 +10,23 @@ const counter = (state = 0, action) => {
   }
 }
 
-export default counter;
+const addCounter = (list) => {
+  return [...list.concat([0])]
+}
+
+const removeCounter = (list, index) => {
+  return [
+    ...list.slice(0, index),
+    ...list.slice(index + 1),
+  ]
+}
+
+const incrementCounter = (list, index) => {
+  return [
+    ...list.slice(0, index),
+    list[index] + 1,
+    ...list.slice(index + 1),
+  ]
+}
+
+export { counter, addCounter, removeCounter, incrementCounter };
