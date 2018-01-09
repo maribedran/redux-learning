@@ -2,6 +2,8 @@
 
 Implementing the https://egghead.io/courses/getting-started-with-redux course
 
+Enviroment setup at https://github.com/reactjs/redux/tree/master/examples/counter
+
 ## Concepts
 
 1. State (Object) is read-only
