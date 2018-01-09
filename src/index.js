@@ -1,22 +1,29 @@
+import React from 'react';
+import ReactDOM from 'react-dom'
 import { createStore } from 'redux';
+
 import counter from './reducers/counter.js';
+import Counter from './components/counter.js';
 
 const store = createStore(counter);
 
 store.dispatch({ type: 'INCREMENT' });
 
 const render = () => {
-  document.body.innerText = store.getState();
+  ReactDOM.render(
+    <Counter
+      value={store.getState()}
+      onIncrement={() => store.dispatch({ type: 'INCREMENT' })}
+      onDecrement={() => store.dispatch({ type: 'DECREMENT' })}
+    />,
+    document.getElementById('root')
+  )
 }
 
 store.subscribe(render);
-
 render();
 
-document.addEventListener('click', () => {
-  store.dispatch({ type: 'INCREMENT' })
-})
-
+// createStore implementation
 const myCreateStore = (reducer) => {
   let state;
   let listeners = [];
